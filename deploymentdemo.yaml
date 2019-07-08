@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-demo
+spec:
+  selector:
+    matchLabels:
+      run: load-balancer-example-00
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: load-balancer-example-00
+    spec:
+      containers:
+        - name: app-demo
+          image: sarahlaw007/dot-net-00:try01
+          ports:
+            - containerPort: 8080
+              protocol: TCP
