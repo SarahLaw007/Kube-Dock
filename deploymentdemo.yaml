@@ -16,5 +16,5 @@ spec:
         - name: app-demo
           image: sarahlaw007/dot-net-00:try01
           ports:
-            - containerPort: 8080
+            - containerPort: 80
               protocol: TCP
